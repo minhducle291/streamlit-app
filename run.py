@@ -1,22 +1,22 @@
 import streamlit as st
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+#import gspread
+#from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 from io import BytesIO
 import xlsxwriter
 
 # Bước 1: Kết nối đến Google Sheets
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(r'D:\PAST\STREAMLIT\credentials.json', scope)
-client = gspread.authorize(creds)
-spreadsheet = client.open('streamlit')
-sheet = spreadsheet.get_worksheet(0)  # Trang tính đầu tiên (chỉ số 0)
-sheet2 = spreadsheet.get_worksheet(1)  # Trang tính thứ hai (chỉ số 1)
+#scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+#creds = ServiceAccountCredentials.from_json_keyfile_name(r'D:\PAST\STREAMLIT\credentials.json', scope)
+#client = gspread.authorize(creds)
+#spreadsheet = client.open('streamlit')
+#sheet = spreadsheet.get_worksheet(0)  # Trang tính đầu tiên (chỉ số 0)
+#sheet2 = spreadsheet.get_worksheet(1)  # Trang tính thứ hai (chỉ số 1)
 
 # Bước 2: Hiển thị dữ liệu từ Google Sheets trong Streamlit
-st.title('Bộ danh mục chuẩn')
-df_sieuthi_danhmuc = pd.DataFrame()
-df_danhmuc_size = pd.DataFrame()
+#st.title('Bộ danh mục chuẩn')
+#df_sieuthi_danhmuc = pd.DataFrame()
+#df_danhmuc_size = pd.DataFrame()
 
 def Transform_SizeDanhMuc(data_frame):
     # Sử dụng pd.melt để unpivot các cột 'Danh mục 2500', 'Danh mục 2000', ...
